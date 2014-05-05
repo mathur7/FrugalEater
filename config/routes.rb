@@ -1,6 +1,10 @@
 FrugalEater::Application.routes.draw do
   devise_for :users
+
   resources :dashboard
+
+  resources :menuitems
+  
   root to: "home#index"
 
 #   Prefix Verb   URI Pattern                    Controller#Action
@@ -19,6 +23,23 @@ FrugalEater::Application.routes.draw do
 #                          PATCH  /users(.:format)               devise/registrations#update
 #                          PUT    /users(.:format)               devise/registrations#update
 #                          DELETE /users(.:format)               devise/registrations#destroy
+#          dashboard_index GET    /dashboard(.:format)           dashboard#index
+#                          POST   /dashboard(.:format)           dashboard#create
+#            new_dashboard GET    /dashboard/new(.:format)       dashboard#new
+#           edit_dashboard GET    /dashboard/:id/edit(.:format)  dashboard#edit
+#                dashboard GET    /dashboard/:id(.:format)       dashboard#show
+#                          PATCH  /dashboard/:id(.:format)       dashboard#update
+#                          PUT    /dashboard/:id(.:format)       dashboard#update
+#                          DELETE /dashboard/:id(.:format)       dashboard#destroy
+#                menuitems GET    /menuitems(.:format)           menuitems#index
+#                          POST   /menuitems(.:format)           menuitems#create
+#             new_menuitem GET    /menuitems/new(.:format)       menuitems#new
+#            edit_menuitem GET    /menuitems/:id/edit(.:format)  menuitems#edit
+#                 menuitem GET    /menuitems/:id(.:format)       menuitems#show
+#                          PATCH  /menuitems/:id(.:format)       menuitems#update
+#                          PUT    /menuitems/:id(.:format)       menuitems#update
+#                          DELETE /menuitems/:id(.:format)       menuitems#destroy
+#                     root GET    /                              home#index
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
