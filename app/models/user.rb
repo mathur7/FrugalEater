@@ -4,5 +4,5 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
-  #key = ENV['LOCU_KEY']
+  #key = ENV['LOCU_KEY'] y d
 end
