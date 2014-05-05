@@ -1,1 +1,13 @@
-<h1> Welcome to your dashboard! </h1>
+
+
+		<h1> Welcome to your dashboard! </h1>
+		<div class="border-form-div">
+		<%= form_for @menuitem do |f| %>
+		<h3><%= label_tag(:name, "What food item are you craving today?") %></h3>
+		<p><%= f.text_field :name, :class => "form-control input-2-md" %></p>
+		</br>
+		<p><%= f.submit "Search", :class => "btn btn-info"%></p>	
+		<% end %> <br>
+		<%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+		</div>
+	

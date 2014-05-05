@@ -1,8 +1,8 @@
 <div class="row">
-	<div class="col-sm-1 col-md-offset-9">
+	<div class="col-xs-9 col-xs-offset-1">
 		<%= form_for @menuitem do |f| %>
-		<h3><%= label_tag(:name, "What food item are you craving today?") %></h3>
-		<p><%= f.text_field :name, :class => "form-control input-6-lg" %></p>
+		<h4><%= label_tag(:name, "What food item are you craving today?") %></h4>
+		<p><%= f.text_field :name, :class => "form-control input-2-md" %></p>
 		</br>
 		<p><%= f.submit "Search", :class => "btn btn-info"%></p>	
 		<% end %> <br>
