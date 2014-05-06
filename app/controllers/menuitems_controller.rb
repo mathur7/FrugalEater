@@ -5,15 +5,14 @@ class MenuitemsController < ApplicationController
   end
 
   def index
-     locu_name = params[:menuname] 
-     #currently hardcoded the name paramater with burrito, that needs to change 
+     locu_name = params[:name] 
      response = Typhoeus.get("https://api.locu.com/v1_0/menu_item/search/?name=#{locu_name}&locality=San%20Francisco&price__lte=10&api_key=#{ENV['LOCU_KEY']}", followlocation: true)
      @menuitems = JSON.parse(response.body)
      @menuitems.inspect
   end
 
-  def results
-    search = params[:menuid]
+  def show
+    search = params[:id]
     response = Typhoeus.get("https://api.locu.com/v1_0/menu_item/search/#{search}/?api_key=#{ENV['LOCU_KEY']}")
     @menuitems = JSON.parse(response.body)
     @restaurant = @menuitems['restaurant']
