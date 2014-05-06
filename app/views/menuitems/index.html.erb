@@ -1,10 +1,10 @@
 <div class="row">
-	<div class="col-xs-9 col-xs-offset-1">
-		<%= form_for @menuitem do |f| %>
-		<h4><%= label_tag(:name, "What food item are you craving today?") %></h4>
-		<p><%= f.text_field :name, :class => "form-control input-2-md" %></p>
-		</br>
-		<p><%= f.submit "Search", :class => "btn btn-info"%></p>	
-		<% end %> <br>
-	</div>
+	<div class="col-sm-3">
+		<p>Here's all the stuff you can eat frugal eater!</p>
+		<%= @menuitems %>
+	</div>	
 </div>
+
+                
+               
+

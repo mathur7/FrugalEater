@@ -7,7 +7,7 @@ FrugalEater::Application.routes.draw do
   
   root to: "home#index"
 
-#   Prefix Verb   URI Pattern                    Controller#Action
+# #   Prefix Verb   URI Pattern                    Controller#Action
 #         new_user_session GET    /users/sign_in(.:format)       devise/sessions#new
 #             user_session POST   /users/sign_in(.:format)       devise/sessions#create
 #     destroy_user_session DELETE /users/sign_out(.:format)      devise/sessions#destroy
@@ -40,6 +40,7 @@ FrugalEater::Application.routes.draw do
 #                          PUT    /menuitems/:id(.:format)       menuitems#update
 #                          DELETE /menuitems/:id(.:format)       menuitems#destroy
 #                     root GET    /                              home#index
+#                     
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

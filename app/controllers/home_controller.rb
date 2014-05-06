@@ -5,12 +5,12 @@ class HomeController < ApplicationController
       if user_signed_in?
         redirect_to :controller => 'dashboard', :action => 'index'
       end
-      @menuitem = Menuitem.new
+
   end
 
-  def show
-    @menuitem = Menuitem.find(params[:id])
-  end
+  # def show
+  #   @menuitem = Menuitem.find(params[:id])
+  # end
 
   # def new
   #   @user = User.new

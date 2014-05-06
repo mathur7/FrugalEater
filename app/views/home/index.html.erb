@@ -4,12 +4,11 @@
 		<h1> Frugal Eater </h1>
 		<h3> Hungry? But can't afford to spend a bomb? No sweat! Frugal eater is here to your rescue! </h3>
 		<div class="border-form-div">
-		<%= form_for @menuitem do |f| %>
+		<%= form_for @menuitem, :method => "GET" do |f| %>
 		<h4><%= label_tag(:name, "What food item are you craving today?") %></h4>
 		<p><%= f.text_field :name, :class => "form-control input-2-md" %></p>
 		</br>
 		<p><%= f.submit "Search", :class => "btn btn-info"%></p>
-		<!-- need to link search button to the results page -->
 		<% end %> <br>
 		</div>
 
@@ -35,4 +34,3 @@
 
 	</div>
 </div>
-
