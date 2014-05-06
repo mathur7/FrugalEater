@@ -8,16 +8,20 @@ class MenuitemsController < ApplicationController
      locu_name = params[:name] 
      response = Typhoeus.get("https://api.locu.com/v1_0/menu_item/search/?name=#{locu_name}&locality=San%20Francisco&price__lte=10&api_key=#{ENV['LOCU_KEY']}", followlocation: true)
      @menuitems = JSON.parse(response.body)
-     @menuitems.inspect
+     # @menuitems.inspect
   end
 
   def show
     search = params[:id]
-    response = Typhoeus.get("https://api.locu.com/v1_0/menu_item/search/#{search}/?api_key=#{ENV['LOCU_KEY']}")
+    response = Typhoeus.get("https://api.locu.com/v1_0/menu_item/#{search}/?api_key=#{ENV['LOCU_KEY']}")
     @menuitems = JSON.parse(response.body)
-    @restaurant = @menuitems['restaurant']
-    @price = @menuitems['price']
-    @address = @menuitems['address']
+    @menuitem = @menuitems["objects"][0]["name"] 
+    @price = @menuitems["objects"][0]["price"] 
+    @name = @menuitems["objects"][0]["venue"]["name"] 
+    @address = @menuitems["objects"][0]["venue"]["street_address"] 
+    @postal_code = @menuitems["objects"][0]["venue"]["postal_code"] 
+    @locality = @menuitems["objects"][0]["venue"]["locality"] 
+    @region = @menuitems["objects"][0]["venue"]["region"] 
   end
 
 end
