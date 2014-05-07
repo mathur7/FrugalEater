@@ -4,6 +4,8 @@ FrugalEater::Application.routes.draw do
   resources :dashboard
 
   resources :menuitems
+
+  resources :favorites
   
   root to: "home#index"
 
@@ -39,6 +41,14 @@ FrugalEater::Application.routes.draw do
 #                          PATCH  /menuitems/:id(.:format)       menuitems#update
 #                          PUT    /menuitems/:id(.:format)       menuitems#update
 #                          DELETE /menuitems/:id(.:format)       menuitems#destroy
+#                favorites GET    /favorites(.:format)           favorites#index
+#                          POST   /favorites(.:format)           favorites#create
+#             new_favorite GET    /favorites/new(.:format)       favorites#new
+#            edit_favorite GET    /favorites/:id/edit(.:format)  favorites#edit
+#                 favorite GET    /favorites/:id(.:format)       favorites#show
+#                          PATCH  /favorites/:id(.:format)       favorites#update
+#                          PUT    /favorites/:id(.:format)       favorites#update
+#                          DELETE /favorites/:id(.:format)       favorites#destroy
 #                     root GET    /                              home#index
 #                     
 

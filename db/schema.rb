@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140505032443) do
+ActiveRecord::Schema.define(version: 20140506235450) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,10 +21,13 @@ ActiveRecord::Schema.define(version: 20140505032443) do
     t.text     "name"
     t.float    "price"
     t.string   "address"
-    t.integer  "phone_number"
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "postal_code"
+    t.text     "locality"
+    t.text     "region"
+    t.integer  "Locu_id"
   end
 
   add_index "favorites", ["user_id"], name: "index_favorites_on_user_id", using: :btree
