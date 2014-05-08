@@ -1,12 +1,13 @@
 FrugalEater::Application.routes.draw do
   devise_for :users
-
+  
   resources :dashboard
 
   resources :menuitems
 
   resources :favorites
-  
+
+
   root to: "home#index"
 
 # #   Prefix Verb   URI Pattern                    Controller#Action

@@ -14,7 +14,7 @@ class MenuitemsController < ApplicationController
     search = params[:id]
     response = Typhoeus.get("https://api.locu.com/v1_0/menu_item/#{search}/?api_key=#{ENV['LOCU_KEY']}")
     @menuitems = JSON.parse(response.body)
-    @menuitem = @menuitems["objects"][0]["name"] 
+    @item = @menuitems["objects"][0]["name"] 
     @description = @menuitems["objects"][0]["description"] 
     @price = @menuitems["objects"][0]["price"] 
     @name = @menuitems["objects"][0]["venue"]["name"] 

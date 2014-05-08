@@ -19,17 +19,30 @@ h1 {
 h3 {
 	font-size: 20px;
 	text-align: center;
+  margin-top: 20px;
+}
+
+h2{
+  margin-top: 60px;
+  font-size: 15px;
+  text-align: center;
 }
 
 h4{
 	text-align: left;
 }
 
+.flash{
+  text-align: center;
+}
+
+
+
 .border-form-div {
   max-width: 300px;
   padding: 19px 29px 29px;
   margin: 0 auto 20px;
-  margin-top: 50px;
+  margin-top: 30px;
   background-color: #fff;
   border: 1px solid #e5e5e5;
   -webkit-border-radius: 5px;
@@ -51,4 +64,67 @@ h4{
   height: auto;
   margin-bottom: 15px;
   padding: 7px 9px;
+  margin-top: 10px;
 }
+
+.panel-heading {
+  text-align: center;
+  font-size: 25px;
+}
+
+td {
+  text-align: center;
+}
+
+th {
+  text-align: center;
+}
+
+body {
+  margin-top: 20px;
+  background: url("http://i.imgur.com/RQcbp1U.jpg");
+}
+
+img {
+  margin-right: 700px;
+}
+
+@media (min-width:768px) { 
+
+  /*.navbar.navbar-inverse{
+    background: white;
+  }
+*/
+  .navbar > .container {
+      text-align: center;
+  }
+  .navbar-header {
+      float: none;
+      display: inline-block;
+  }
+  .navbar-brand {
+      float: none;
+      display: inline-block;
+  }
+  .navbar .navbar-nav {
+      float: none;
+      display: inline-block;
+      clear: none;
+  }
+  .navbar .navbar-nav > li {
+      float: none;
+      display: inline-block;
+  }
+  .navbar .navbar-nav > li li {
+      text-align: left;
+  }
+  .collapse.navbar-collapse#centerednav {
+      float: none;
+      display: inline-block!important;
+      width: auto;
+      clear: none;
+  }
+}
+
+
+

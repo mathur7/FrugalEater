@@ -10,16 +10,22 @@
 			<%= @locality %> <br></br>
 			<%= @region %>, <%= @postal_code %> <br></br>
 		</p>
-		<button type="button" class="btn btn-default btn-md">
-  		<span class="glyphicon glyphicon-star"></span> Favorite 
-		</button> <br></br>
 
+		<%= form_for @favorite do |f| %>
+			<%= f.hidden_field :name, :value => @menuitem %>
+			<%= f.hidden_field :description, :value => @description %>
+			<%= f.hidden_field :restaurant, :value => @name %>
+			<%= f.hidden_field :price, :value => @price %>
+			<%= f.hidden_field :address, :value => @address %>
+			<%= f.hidden_field :postal_code, :value => @postal_code %>
+			<%= f.hidden_field :locality, :value => @locality %>
+			<%= f.hidden_field :region, :value => @region %>
+			<%= f.hidden_field :user_id, :value => current_user.id %>
+			<%= button_to "Favorite", { controller: :favorites, action: :create }, :method => :post, :class => "btn btn-default btn-md" %> <br>
+		<% end %>
 
-		<button type="button" class="btn btn-default btn-md">
-  		<span class="glyphicon glyphicon-star"></span> View all favorites
-		</button>
-		<!--link it to favorites index page -->
-		
+		<%= button_to "View all favorites", { controller: :favorites, action: :index }, :method => :get, :class => "btn btn-default btn-md" %>
+			
 	</div>
 </div>
 

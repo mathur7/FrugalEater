@@ -1,12 +1,12 @@
 
 
-		<h1> Welcome to your dashboard! </h1>
+		<h1> Welcome to your dashboard, amigo! </h1>
 		<div class="border-form-div">
 		<%= form_tag("/menuitems", method: "get") do %>
   			<%= label_tag(:name, "What food item are you craving today?") %>
   			<%= text_field_tag(:name) %>
-  			<%= submit_tag("Search") %>
+  			<%= submit_tag("Search", :class => "btn btn-primary") %><br></br>
 		<% end %>
-		<%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+		<%= link_to "Sign out", destroy_user_session_path, :method => :delete, :class => "btn btn-primary" %>
 		</div>
 	

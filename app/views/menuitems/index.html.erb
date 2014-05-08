@@ -1,14 +1,30 @@
-<div class="row">
-	<div class="col-sm-3">
-		<p>Here's all the stuff you can eat frugal eater!</p>
+
+<div class="panel panel-default">
+  <div class="panel-heading">Here's all the stuff you can eat, frugaleater!</div>
+  <table class="table table-bordered">
+
+  	<thead>
+    <tr>
+    <th>Name</th>
+    <th>Price</th>
+    <th>Restaurant</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr>	
+    	<% @menuitems["objects"].each do |i| %>
+		<td><a href='/menuitems/<%=i["id"]%>'><%=i["name"]%></a></td>
+		<td><a href='/menuitems/<%=i["id"]%>'><%=i["price"]%></a></td>
+		<td><a href='/menuitems/<%=i["id"]%>'><%=i["venue"]["name"]%></a><br></td>
+		</tr>
+    </tbody> 
+    <% end %>
+
+    </table> 
+</div> 
 		
-			<%= @menuitems["objects"].each do |i| %>
-			<a href='/menuitems/<%=i["id"]%>'>
-			<%=i["name"]%> <%=i["price"]%> <%=i["venue"]["name"]%><br></br>
-			<% end %>	
-	
-	</div>	
-</div>
+		
 
                 
                

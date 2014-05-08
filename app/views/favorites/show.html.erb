@@ -1,15 +1,26 @@
-
+<div><p> Here's more on your favorite item!</p></div>
 <div class="row">
-	<div class="col-sm-3">
-		<h5> Your favorites list has been updated successfully!</h5>
-		<p><%= @favorite.name %></p>
-		<p><%= @favorite.description %></p>
-		<p><%= @favorite.price %></p>
-		<p><%= @favorite.restaurant %></p>
-		<p><%= @favorite.address %></p>
+	<div class="col-sm-3">	
+		<% if !@favorite.name.blank? -%>
+		<p>Item name: <%= @favorite.name %></p>
+		<% else %>
+		<p><% @favorite.name.skip %> </p>
+		<% end %>
+
+		<p>Description: <%= @favorite.description %></p>
+		<p>Price: <%= @favorite.price %></p>
+		<p>Restaurant: <%= @favorite.restaurant %></p>
+		<p>Address: <%= @favorite.address %></p>
 		<p><%= @favorite.postal_code %></p>
 		<p><%= @favorite.locality %></p>
 		<p><%= @favorite.region %></p>
+
+		
+ 		<p>Item name: <%=@favorite.title %></p>
+ 		
+ 		
+		<% end %>
+
 
 		<%= button_to "Click here to view all your favorites", { controller: :favorites, action: :index }, :method => :get, :class => "btn btn-default btn-md" %>
 	</div>
