@@ -1,1 +1,5 @@
 <h1> Here are all your favorites </h1>
+	<% @favorites.each do |i| %>
+		<a href="/favorites/<%=i["id"]%>">
+		<%=i["name"]%> <%=i["description"]%> <%= i["price"] %><br></br>
+	<% end %>	

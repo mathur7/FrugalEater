@@ -22,8 +22,14 @@ class MenuitemsController < ApplicationController
     @postal_code = @menuitems["objects"][0]["venue"]["postal_code"] 
     @locality = @menuitems["objects"][0]["venue"]["locality"] 
     @region = @menuitems["objects"][0]["venue"]["region"] 
+    @favorite = Favorite.new
+    # @fav = { name: @menuitem, description: @description, price: @price, resturant: @name, address: @address, postal_code: @postal_code, locality: @locality, region: @region}
     #Favorite.create(menuitem: @menuitem, description: @description, price: @price, name: @name, address: @address, postal_code: @postal_code, locality: @locality, region: @region)
 
+  end
+
+  def create
+    locu_id = params[:id] #want to associate my menuitem_id with the locu_id, so that when i call locu_id in the controller, it shows the data associated with the menuitem_id)
   end
 
 end

@@ -1,13 +1,16 @@
+
 <div class="row">
 	<div class="col-sm-3">
-		<p>Menu item: <%= @menuitem %> 
-		<p>Description: <%= @description %> </p> 
-		<p>Price: $<%= @price %> </p>
-		<p>Restaurant: <%= @name %> </p>
-		<p> 
-			<%= @address %> <br></br>
-			<%= @locality %> <br></br>
-			<%= @region %>, <%= @postal_code %> <br></br>
-		</p>
+		<h5> Your favorites list has been updated successfully!</h5>
+		<p><%= @favorite.name %></p>
+		<p><%= @favorite.description %></p>
+		<p><%= @favorite.price %></p>
+		<p><%= @favorite.restaurant %></p>
+		<p><%= @favorite.address %></p>
+		<p><%= @favorite.postal_code %></p>
+		<p><%= @favorite.locality %></p>
+		<p><%= @favorite.region %></p>
+
+		<%= button_to "Click here to view all your favorites", { controller: :favorites, action: :index }, :method => :get, :class => "btn btn-default btn-md" %>
 	</div>
 </div>

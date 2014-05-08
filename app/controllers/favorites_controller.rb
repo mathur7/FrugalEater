@@ -1,20 +1,27 @@
 class FavoritesController < ApplicationController
 
-  def new
-    @favorite = Favorite.new
+  def create    
+      @favorite = Favorite.new
+      @favorite.update favorite_params  
+      redirect_to favorite_path(@favorite)
   end
 
   def index
     @favorites = Favorite.all
   end
 
-  # def show
-  #   @favorite = Favorite.find(params[:id])
-  # end
-
-  def create
-      Favorite.create favorite_params    
+  def show
+    @favorite = Favorite.find(params[:id])
   end
+
+  private
+  def favorite_params
+      params.require(:favorite).permit(:name, :description, :price, :restaurant, :address, :postal_code, :locality, :region, :user_id)
+  end
+
+end
+
+  
 
   # def edit
   #   @favorite = favorite.find(params[:id])
@@ -31,10 +38,5 @@ class FavoritesController < ApplicationController
   #   redirect_to favorites
   # end
 
-  private
-  def favorite_params
-    params.require(:favorite).permit(:name, :description, :price, :venue_name, :address, :postal_code, :locality, :region)
-  end
-
-end
+  
 
