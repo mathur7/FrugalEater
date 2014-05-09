@@ -6,13 +6,13 @@ describe Favorite do
     favorite.should be_valid
   end
 
-  describe 'name' do
-    it 'should not be empty' do
-      favorite = Favorite.create(name: " ")
-      favorite.should_not be_valid
-      favorite.errors[:name].should include("can't be blank")
-    end
-  end
+  # describe 'name' do
+  #   it 'should not be empty' do
+  #     favorite = Favorite.create(name: " ")
+  #     favorite.should_not be_valid
+  #     favorite.errors[:name].should include("can't be blank")
+  #   end
+  # end
 
   describe 'description' do
     it 'should not be empty' do

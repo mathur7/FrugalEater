@@ -1,7 +1,8 @@
 
 
 		<h1> Welcome to your dashboard, amigo! </h1>
-		<div class="border-form-div">
+		<div class="border-form-div-1">
+			
 		<%= form_tag("/menuitems", method: "get") do %>
   			<%= label_tag(:name, "What food item are you craving today?") %>
   			<%= text_field_tag(:name) %>
@@ -9,4 +10,5 @@
 		<% end %>
 		<%= link_to "Sign out", destroy_user_session_path, :method => :delete, :class => "btn btn-primary" %>
 		</div>
-	
+
+		
