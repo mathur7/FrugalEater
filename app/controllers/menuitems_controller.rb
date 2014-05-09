@@ -5,18 +5,19 @@ class MenuitemsController < ApplicationController
   end
 
   def index
-     locu_name = params[:name] 
-     response = Typhoeus.get("https://api.locu.com/v1_0/menu_item/search/?name=#{locu_name}&locality=San%20Francisco&price__lte=10&api_key=#{ENV['LOCU_KEY']}", followlocation: true)
+     locu_name = params[:name]
+     @string = (locu_name).gsub(/ /, '%20')
+
+     response = Typhoeus.get("https://api.locu.com/v1_0/menu_item/search/?name=#{@string}&locality=San%20Francisco&price__lte=10&api_key=#{ENV['LOCU_KEY']}", followlocation: true)
      @menuitems = JSON.parse(response.body)
+
   end
 
   def show
     
     search = params[:id]
-    if params[:id] == ""
-    redirect "/"
-    else
-    response = Typhoeus.get("https://api.locu.com/v1_0/menu_item/#{search}/?api_key=#{ENV['LOCU_KEY']}")
+    @string = (search).gsub(/ /, '%20')
+    response = Typhoeus.get("https://api.locu.com/v1_0/menu_item/#{@string}/?api_key=#{ENV['LOCU_KEY']}")
     @menuitems = JSON.parse(response.body)
     @item = @menuitems["objects"][0]["name"] 
     @description = @menuitems["objects"][0]["description"] 
@@ -27,6 +28,7 @@ class MenuitemsController < ApplicationController
     @locality = @menuitems["objects"][0]["venue"]["locality"] 
     @region = @menuitems["objects"][0]["venue"]["region"] 
     @favorite = Favorite.new
+
     # @fav = { name: @menuitem, description: @description, price: @price, resturant: @name, address: @address, postal_code: @postal_code, locality: @locality, region: @region}
     #Favorite.create(menuitem: @menuitem, description: @description, price: @price, name: @name, address: @address, postal_code: @postal_code, locality: @locality, region: @region)
 
