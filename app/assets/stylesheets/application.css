@@ -12,6 +12,19 @@
  *= require_tree .
  */
 
+ .logo {
+  padding: 1px;
+  text-align: left;
+  background-attachment: static;
+  vertical-align: text-bottom;
+ }
+
+ #powered_by_locu {
+  margin-top: -38px;
+  margin-left: 104px;
+  position: relative;
+ }
+
 h1 {
 	text-align: center;
   margin-top: 90px;
@@ -33,6 +46,13 @@ p {
   font-family: 'Dosis', sans-serif;
   text-decoration: none;
   font-weight:bold;
+  font-size: 17px;
+}
+
+li {
+  font-family:'Dosis', sans-serif;
+  font-size: 18px;
+  color:orange;
 }
 
 .header{
@@ -43,43 +63,40 @@ p {
   color: black;
 }
 
-
-
 .flash{
   text-align: center;
 }
 
 .col-sm-3{
-  margin:30px;
   background: url("http://i.imgur.com/yhH4YuK.png");
   background-repeat:repeat;
-  height: 500px;
-  padding:  25px;
-  margin-top: 90px;
-  margin-left: 133px;
-  font-family: 'Dosis', sans-serif;
-  font-size: 20px;
+  height:470px;
+  width:350px;
+  padding: 25px;
+  margin-top:89px;
+  margin-bottom: -14px;
+  margin-left:133px;
+  font-family:'Dosis', sans-serif;
+  font-size:17px;
   border-radius: 10px;
+  position:relative;
+  text-align:left;
 }
 
 .btn.btn-default {
   background:yellow;
-  font-size: 15px;
+  font-size: 13px;
 }
-
-.map {
-  margin-top: -451px;
-  border-radius: 10px;
-}
-
 
 iframe {
-  margin-left: 370px;
-  /*margin-top: -333px;*/
-  width:800px;
-  height: 500px;
-  border:10px solid white;
+  margin-top: -493px;
+  margin-left: 570px;
   border-radius: 10px;
+  position: absolute;
+  height:470px;
+  width:720px;
+  border:10px solid white;
+  position: relative;
 }
 
 .border-form-div-1 {
@@ -143,17 +160,19 @@ iframe {
 
 .panel-heading {
   text-align: center;
-  font-size: 25px;
-  margin-top: 30px;
-  padding: 20px;
+  font-size: 28px;
+  margin-top: 0px;
+  font-family: 'Anton', sans-serif;
+
 }
 
 .panel.panel-default{
-  margin-top: 50px;
+  margin-top: 89px;
   margin-left: 50px;
   margin-right: 50px;
   margin-bottom: 30px;
   padding-top: 20px;
+  border:5px solid black;
 }
 
 td {
@@ -165,27 +184,41 @@ th {
 }
 
 body {
-  margin-top: 20px;
+  /*margin-top: 20px;*/
   background: url("http://i.imgur.com/RQcbp1U.jpg");
+  position: relative;
 }
 
 #slideshow {
   padding:0px;
-  margin-top: 20px;
+  margin-top: 40px;
   margin-left: 140px; 
   margin-bottom: 15px; 
   width: 770px;
   height:459px;
   border: 4px solid white;
   border-radius: 15px;
+  position: relative;
 }
 
-.row2{
-  margin-top: 20px;
+.row {
+  position: relative;
+}
+
+.wrapper {
+  position: relative;
+}
+
+.row1 {
+  position: relative;
 }
 
 img {
   margin-right: 700px;
+}
+
+.btn {
+  position: relative;
 }
 
 
@@ -199,8 +232,9 @@ img {
       text-align: center;
   }
   .navbar-header {
-      float: none;
+      float: left;
       display: inline-block;
+      vertical-align: bottom;
   }
   .navbar-brand {
       float: none;
@@ -216,9 +250,11 @@ img {
       display: inline-block;
   }
 
-  .active {
+  .active > li {
+    font-family:'Dosis', sans-serif;
     background: black;
   }
+
   .navbar .navbar-nav > li li {
       text-align: left;
 
@@ -231,13 +267,13 @@ img {
   }
 }
 
-.details{
+/*.details{
   padding: 10px;
   margin-left:30px;
   background: white;
   margin-top: 70px;
   margin-bottom: 10px;
-}
+}*/
 
 
 /*.table.table-bordered{
