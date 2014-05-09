@@ -11,7 +11,11 @@ class MenuitemsController < ApplicationController
   end
 
   def show
+    
     search = params[:id]
+    if params[:id] == ""
+    redirect "/"
+    else
     response = Typhoeus.get("https://api.locu.com/v1_0/menu_item/#{search}/?api_key=#{ENV['LOCU_KEY']}")
     @menuitems = JSON.parse(response.body)
     @item = @menuitems["objects"][0]["name"] 
