@@ -185,7 +185,6 @@ th {
 }
 
 body {
-  /*margin-top: 20px;*/
   background: url("http://i.imgur.com/RQcbp1U.jpg");
   position: relative;
 }
@@ -268,21 +267,7 @@ img {
   }
 }
 
-/*.details{
-  padding: 10px;
-  margin-left:30px;
-  background: white;
-  margin-top: 70px;
-  margin-bottom: 10px;
-}*/
 
-
-/*.table.table-bordered{
-  margin-left: 20px;
-  margin-right: 20px;
-  padding:20px;
-  margin-top: 70px;
-}*/
 
 
 
