@@ -6,12 +6,19 @@ describe Favorite do
     favorite.should be_valid
   end
 
-  describe 'name' do
-    it 'should include text or it could be empty' do
-      favorite = Favorite.create(name: 'cheesy gordita crunch')
-      favorite.should be valid
-    end
-  end
+  # describe 'name' do
+  #   it 'should include text or it could be empty' do
+  #     favorite = Favorite.create(name: 'cheesy gordita crunch')
+  #     favorite.should be valid
+  #   end
+  # end
+
+  # describe 'description' do
+  #   it 'should not be empty' do
+  #     favorite = Favorite.create(description: "oozing of cheese, crunchy taco and fresh baja sauce")
+  #     favorite.should be_valid
+  #   end
+  # end  
 
   describe 'restaurant' do
     it 'should not be empty' do
@@ -28,13 +35,6 @@ describe Favorite do
       favorite.errors[:price].should include("can't be blank")
     end
   end
-
-  describe 'description' do
-    it 'should not be empty' do
-      favorite = Favorite.create(description: "oozing of cheese, crunchy taco and fresh baja sauce")
-      favorite.should be_valid
-    end
-  end  
 
   describe 'address' do
     it 'should not be empty' do
