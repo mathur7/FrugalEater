@@ -28,16 +28,12 @@ class MenuitemsController < ApplicationController
     @locality = @menuitems["objects"][0]["venue"]["locality"] 
     @region = @menuitems["objects"][0]["venue"]["region"] 
     @favorite = Favorite.new
+
+
   end
 
   def create
-    locu_id = params[:id] 
+    locu_id = params[:id]
   end
 
 end
-
-  
-  
-
-  
-

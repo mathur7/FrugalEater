@@ -1,7 +1,7 @@
 <div class = "header"> Hungry? But can't afford to spend a bomb? No sweat! Frugal eater is here to your rescue! </div>
 <div class = "row1">
 	<div class="col-md-3">
-		
+
 			<div class="border-form-div">
 				<div id = "user_nav">
 				<%= form_tag("/menuitems", method: "get") do %>
@@ -28,14 +28,11 @@
 				</div>
 			</div>
 
-			
+
 			<% flash.each do|key,value| %>
    			<div class = "flash"> <%=value%> </div>
 			<% end %>
 	</div>
 </div>
-			
+
 		<%= render "home/slideshow" %>
-
-
-	

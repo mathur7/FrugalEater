@@ -1,13 +1,9 @@
 class FavoritesController < ApplicationController
-  
-  include FavoritesHelper
-
-  before_filter :authenticate_user!, :only => [:create, :destroy, :update]
 
   def create    
       @favorite = Favorite.new
-      @favorite.user = current_user
       @favorite.update favorite_params  
+      redirect_to favorite_path(@favorite)
   end
 
   def index
@@ -21,6 +17,7 @@ class FavoritesController < ApplicationController
   def destroy
     Favorite.find(params[:id]).destroy
     redirect_to favorites_path
+
   end
 
   def update
@@ -35,7 +32,6 @@ class FavoritesController < ApplicationController
   end
 
 end
-
   
 
   

@@ -1,5 +1,7 @@
 require 'spec_helper'
 
+require 'spec_helper'
+
 describe Menuitem do
   it "should create a new instance given valid attributes" do
     menuitem = Menuitem.create(restaurant: "Taco Bell", name: 'cheesy gordita crunch', price: '3.00', locu_id: '1')
@@ -40,4 +42,3 @@ describe Menuitem do
   end
 
 end
-
