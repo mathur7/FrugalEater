@@ -13,6 +13,7 @@
  *= require_tree .
  */
 
+ 
  .logo {
   padding: 1px;
   text-align: left;
@@ -87,6 +88,11 @@ li {
 .btn.btn-default {
   background:yellow;
   font-size: 13px;
+  position:relative;
+}
+
+.btn.btn-default.btn-md {
+  position: relative;
 }
 
 iframe {
@@ -205,10 +211,6 @@ body {
   position: relative;
 }
 
-.wrapper {
-  position: relative;
-}
-
 .row1 {
   position: relative;
 }
@@ -216,11 +218,6 @@ body {
 img {
   margin-right: 700px;
 }
-
-.btn {
-  position: relative;
-}
-
 
 @media (min-width:768px) { 
 
