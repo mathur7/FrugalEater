@@ -13,6 +13,7 @@
  *= require_tree .
  */
 
+ 
  .logo {
   padding: 1px;
   text-align: left;
@@ -87,6 +88,11 @@ li {
 .btn.btn-default {
   background:yellow;
   font-size: 13px;
+  position:relative;
+}
+
+.btn.btn-default.btn-md {
+  position: relative;
 }
 
 iframe {
@@ -185,7 +191,6 @@ th {
 }
 
 body {
-  /*margin-top: 20px;*/
   background: url("http://i.imgur.com/RQcbp1U.jpg");
   position: relative;
 }
@@ -206,10 +211,6 @@ body {
   position: relative;
 }
 
-.wrapper {
-  position: relative;
-}
-
 .row1 {
   position: relative;
 }
@@ -217,11 +218,6 @@ body {
 img {
   margin-right: 700px;
 }
-
-.btn {
-  position: relative;
-}
-
 
 @media (min-width:768px) { 
 
@@ -268,21 +264,7 @@ img {
   }
 }
 
-/*.details{
-  padding: 10px;
-  margin-left:30px;
-  background: white;
-  margin-top: 70px;
-  margin-bottom: 10px;
-}*/
 
-
-/*.table.table-bordered{
-  margin-left: 20px;
-  margin-right: 20px;
-  padding:20px;
-  margin-top: 70px;
-}*/
 
 
 

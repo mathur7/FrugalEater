@@ -8,5 +8,6 @@ class Favorite < ActiveRecord::Base
   validates :postal_code, presence: true
   validates :locality, presence: true
   validates :region, presence: true
-  validates :user_id, presence: true
+  validates :user_id, presence: true   
 end
+
