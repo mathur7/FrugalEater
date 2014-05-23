@@ -13,6 +13,8 @@
     </thead>
 
     <tbody>
+    <!-- I could be wrong, but it seems like the loop is off here.  
+         don't you want the tr in each iteration of the loop? -->
     <tr>    
         <% @menuitems["objects"].each do |i| %>
         <td><a href='/menuitems/<%=i["id"]%>'><%=i["name"]%></a></td>

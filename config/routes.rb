@@ -1,6 +1,12 @@
 FrugalEater::Application.routes.draw do
   devise_for :users
   
+  ## It looks like a lot of these routes are not being
+  ## used.  If you use resources, make sure you only
+  ## create the routes you want.  For example,
+  ## resources :dashboard, only: [:index]
+  ## See more info in the rails guide here:
+  ## http://guides.rubyonrails.org/routing.html#restricting-the-routes-created
   resources :dashboard
 
   resources :menuitems
@@ -53,6 +59,8 @@ FrugalEater::Application.routes.draw do
 #                     root GET    /                              home#index
 #                     
 
+
+### Remove all of these unused comments
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -23,6 +23,7 @@
 			<%= f.hidden_field :locality, :value => @locality %>
 			<%= f.hidden_field :region, :value => @region %>
 			<%= f.hidden_field :user_id, :value => current_user.id %>
+			<!-- Form for should od the controller and action part automatically -->
 			<%= button_to "Favorite", { controller: :favorites, action: :create }, :method => :post, :class => "btn btn-default btn-md" %> <br>
 		<% end %>
 

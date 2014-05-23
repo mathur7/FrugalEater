@@ -1,7 +1,10 @@
 require 'spec_helper'
 
+## Doing require twice is harmless but you don't need this line of code.
 require 'spec_helper'
 
+
+## Good tests here.
 describe Menuitem do
   it "should create a new instance given valid attributes" do
     menuitem = Menuitem.create(restaurant: "Taco Bell", name: 'cheesy gordita crunch', price: '3.00', locu_id: '1')

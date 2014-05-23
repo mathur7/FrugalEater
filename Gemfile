@@ -3,12 +3,15 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.4'
 
+## This comment doesn't apply anymore
 # Use sqlite3 as the database for Active Record
 # gem 'sqlite3'
 gem 'pg'
 
 gem 'typhoeus'
 
+## You don't want this in your production set of gems
+## Move it to the development and test group
 gem 'better_errors'
 
 gem 'devise'
