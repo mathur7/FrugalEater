@@ -14,7 +14,8 @@
 
     <tbody>
     <tr>    
-    
+    <!-- The loop looks off here too.  Don't you want a new tr for each
+        iteration of the loop? -->
     <% @favorites.each do |i| %>    
         <td><a href="/favorites/<%=i["id"]%>"><%=i["name"]%></a></td>
         <td><a href="/favorites/<%=i["id"]%>"><%= i["price"] %></a></td>

@@ -12,6 +12,10 @@
  *= require_self
  *= require_tree .
  */
+
+ /*
+   Nice styling overall. I think you have a good eye for it.
+   */
 .logo {
   padding: 1px;
   text-align: left;
@@ -261,6 +265,7 @@ img {
   }
   .collapse.navbar-collapse#centerednav {
       float: none;
+      /* Yikes!  !important probably means something is wrong with your css setup */
       display: inline-block!important;
       width: auto;
       clear: none;
