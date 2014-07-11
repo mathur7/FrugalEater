@@ -1,5 +1,7 @@
 class FavoritesController < ApplicationController
 
+  before_filter :authenticate_user!
+
   def search
     @favorites = Favorite.all
     @search = SimpleSearch.new SimpleSearch.get_params(params)
@@ -11,13 +13,12 @@ class FavoritesController < ApplicationController
   end
 
   def create    
-      @favorite = Favorite.new
-      @favorite.update favorite_params  
-      redirect_to favorite_path(@favorite)
+    @favorite = current_user.favorites.create favorite_params  
+    redirect_to favorite_path(@favorite.id)  
   end
 
   def index
-      @favorites = Favorite.all
+      @favorites = current_user.favorites
   end
 
   def show
@@ -27,7 +28,6 @@ class FavoritesController < ApplicationController
   def destroy
     Favorite.find(params[:id]).destroy
     redirect_to favorites_path
-
   end
 
   def update
@@ -42,6 +42,4 @@ class FavoritesController < ApplicationController
   end
 
 end
-  
-
   

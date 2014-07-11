@@ -99,6 +99,30 @@ iframe {
   position: relative;
 }
 
+.style_img {
+  margin-top: 90px;
+  margin-left: 70px;
+  border-radius: 10px;
+  position: absolute;
+  border:10px solid white;
+}
+
+#directions{
+  padding: 2px 2px 2px 2px;
+  margin-left: 83px;
+  margin-top: 1em;
+  background-color: white;
+  position:relative;
+}
+
+.get-direct {
+  margin-left: 30px;
+  margin-top: 38em;
+  margin-bottom: 0px;
+  opacity: 0.95;
+  color: red;
+}
+
 .border-form-div-1 {
   max-width: 300px;
   padding: 19px 29px 29px;

@@ -1,8 +1,6 @@
-
-
 <div class="row">
 	<div class="col-sm-3">
-		<p>Menu item: <%= @menuitem %> 
+		<p>Menu item: <%= @item %> 
 		<p>Description: <%= @description %> </p> 
 		<p>Price: $<%= @price %> </p>
 		<p>Restaurant: <%= @name %> </p>
@@ -12,9 +10,9 @@
 			<%= @region %>, <%= @postal_code %> <br></br>
 		</p>
 
-
+		<% if current_user %>
 		<%= form_for @favorite do |f| %>
-			<%= f.hidden_field :name, :value => @menuitem %>
+			<%= f.hidden_field :name, :value => @item %>
 			<%= f.hidden_field :description, :value => @description %>
 			<%= f.hidden_field :restaurant, :value => @name %>
 			<%= f.hidden_field :price, :value => @price %>
@@ -27,8 +25,15 @@
 		<% end %>
 
 		<%= button_to "View all favorites", { controller: :favorites, action: :index }, :method => :get, :class => "btn btn-default btn-md" %>
+		<% end %>
 
 		</div>
 
-		<iframe width="700" height="450" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps?ie=UTF8&amp;ll=37.761487,-122.422028&amp;spn=0.154437,0.308647&amp;t=h&amp;z=12&amp;output=embed"></iframe>
+
+		<%= image_tag "http://maps.google.com/maps/api/staticmap?size=650x450&sensor=false&markers=#{@address} &zoom=16", :class => "style_img" %>
+
+		<div class="get-direct">
+          <%= link_to "Get Directions", "https://maps.google.com/maps?daddr=#{@address}", :method => "get", id: "directions" %>
+    </div><!-- get-direct -->   
+
 </div>
