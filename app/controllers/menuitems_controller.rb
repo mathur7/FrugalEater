@@ -1,7 +1,7 @@
 class MenuitemsController < ApplicationController
 
 
-  before_filter :authenticate_user!, except: [:search, :index, :show]
+  # before_filter :authenticate_user!, except: [:search, :index, :show]
 
   def search
     @page_title = "Frugaleater"
