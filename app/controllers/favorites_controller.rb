@@ -14,7 +14,8 @@ class FavoritesController < ApplicationController
 
   def create    
     @favorite = current_user.favorites.create favorite_params  
-    redirect_to favorite_path(@favorite.id)  
+    # redirect_to favorite_path(@favorite.id)  
+    redirect_to favorites_path
   end
 
   def index
