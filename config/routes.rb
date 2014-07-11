@@ -1,11 +1,13 @@
 FrugalEater::Application.routes.draw do
   devise_for :users
-  
+
   resources :dashboard
 
   resources :menuitems
 
-  resources :favorites
+  resources :favorites do
+    get 'search', on: :collection
+  end
 
 
   root to: "home#index"

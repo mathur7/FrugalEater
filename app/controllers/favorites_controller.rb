@@ -1,5 +1,15 @@
 class FavoritesController < ApplicationController
 
+  def search
+    @favorites = Favorite.all
+    @search = SimpleSearch.new SimpleSearch.get_params(params)
+    if @search.valid?
+      @favorites = @search.search_within Favorite.all, :name
+    else
+      flash[:errors] = @search.errors.full_message
+    end
+  end
+
   def create    
       @favorite = Favorite.new
       @favorite.update favorite_params  
@@ -21,7 +31,7 @@ class FavoritesController < ApplicationController
   end
 
   def update
-    @favorite = favorite.find(params[:id])
+    @favorite = Favorite.find(params[:id])
     @favorite.update favorite_params
     redirect_to favorites(@favorite.id)
   end
