@@ -15,4 +15,9 @@ TECHNOLOGIES: Ruby on Rails, HTML5, CSS, Javascript
 GEMS: Devise, Typheous
 APIS: Locu
 
+To do
+
+Add search by location functionality
+
+
 

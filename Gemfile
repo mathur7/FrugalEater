@@ -9,9 +9,9 @@ gem 'pg'
 
 gem 'typhoeus'
 
-gem 'better_errors'
-
 gem 'devise'
+
+gem 'geocoder'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.2'
