@@ -1,5 +1,6 @@
-<div class = "header"> Hungry? But can't afford to spend a bomb? No sweat! Frugal eater is here to your rescue! </div>
-<div class = "row1">
+
+<h1 class="header">Hungry? But can't afford to spend a bomb? No sweat! Frugal eater is here to your rescue! </h1>
+
 	<div class="col-md-3">
 
 			<div class="border-form-div">
@@ -21,18 +22,18 @@
 						<%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
 					<% else %>
 						<p> New user? Sign up now! </p>
-						<p><%= link_to "Sign up", new_user_registration_path,:class=>'btn btn-info' %></p>
+						<p><%= link_to "Sign up", new_user_registration_path, :class=>'btn btn-info' %></p>
 						<p> Already a member? Sign in here! </p>
-						<p><%= link_to "Sign in", new_user_session_path,:class=>'btn btn-info' %></p>
+						<p><%= link_to "Sign in", new_user_session_path, :class=>'btn btn-info' %></p>
 					<% end %>
 				</div>
 			</div>
-
+    </div>
 
 			<% flash.each do|key,value| %>
    			<div class = "flash"> <%=value%> </div>
 			<% end %>
-	</div>
-</div>
+	<%= render "home/slideshow" %>
 
-		<%= render "home/slideshow" %>
+
+		

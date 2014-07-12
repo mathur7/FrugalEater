@@ -1,6 +1,6 @@
+<div class="container">
 <div class="row">
-
-	<div class="col-md-3">
+	<div class="col-md-4">
 		<p>Menu item: <%= @item %> 
 		<p>Description: <%= @description %> </p> 
 		<p>Price: $<%= @price %> </p>
@@ -26,11 +26,16 @@
 		<% end %>
 
 		<%= button_to "View all favorites", { controller: :favorites, action: :index }, :method => :get, :class => "btn btn-default btn-md" %>
+		<% else %>
+			Already a member?
+			<%= link_to "Sign in to favorite this listing", new_user_session_path,:class=>'btn btn-info' %><br></br>
+			Not a member yet?
+			<%= link_to "Sign up to favorite this listing", new_user_registration_path,:class=>'btn btn-info' %> 
 		<% end %>
 
 		</div><!-- col-md-3 -->
 
-		<div class = "col-md-9">
+		<div class = "col-md-8">
 		<%= image_tag "http://maps.google.com/maps/api/staticmap?size=800x400&sensor=false&markers=#{@address} &zoom=16", :class => "style_img" %>
 
 		<div class="get-direct">
@@ -40,3 +45,4 @@
 		</div><!-- col-md-9 -->
 
 </div><!-- row -->
+</div>
