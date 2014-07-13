@@ -9,6 +9,7 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require bootstrap
+
  *= require_self
  *= require_tree .
  */
@@ -16,9 +17,11 @@
 .logo {
   padding: 1px;
   text-align: left;
-  background-attachment: static;
   vertical-align: text-bottom;
-  position: static;
+  position: relative;
+  width: 180px;
+  /*height:100%;
+  margin-top:-3px;*/
  }
 
  #powered_by_locu {
@@ -59,7 +62,7 @@ li {
 }
 
 .header{
-  margin-top: 100px;
+  margin-top: 70px;
   margin-bottom:-10px;
   font-size: 28px;
   text-align: center;
@@ -350,3 +353,14 @@ img {
   margin-left: 250px;
   position: relative;
 }
+
+.user {
+  margin-top:13px;
+}
+
+.user-link {
+  font-family: 'Shadows Into Light Two', cursive;
+  color:white;
+  margin-right:25px;
+}
+

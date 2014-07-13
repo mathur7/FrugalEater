@@ -1,31 +1,38 @@
-<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">      
-  <div class="container">
-      <div class="navbar-header">
-        <a href = "/"><img class = "logo" src = "http://i.imgur.com/2xp80kh.png"width="180" height="60"></a>
-        
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        </button>
-        
-      </div>
 
-      <div class="navbar-form pull-right">                
-            
-            <ul class="links">
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+          <!-- <div class=row> -->
+            <a class="navbar-brand" href="/">FRUGALEATER</a> 
+          <!-- </div> -->
+
+          
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
             <% if user_signed_in? %>
-              <strong class="navbar-link">Hello,  <%= current_user.email %></strong>
-              <%= link_to 'Home', root_path, :class => 'navbar-link' %>
-              <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+              <li class="user"><strong class="user-link">Hello,  <%= current_user.email %></strong></li>
+              <li><%= link_to 'Home', root_path, :class => 'navbar-link' %></li>
+              <li><%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link' %></li>
             <% else %>
-              <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %>
-              <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+              <li><%= link_to 'Home', root_path, :class => 'navbar-link' %></li>
+              <li><%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %></li>
+              <li><%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %></li>
             <% end %>
-            </ul>
-          </div><!-- navbar-form pull-right -->  
-      
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
 
-  </div>      
-</div>  
+
+
+    
