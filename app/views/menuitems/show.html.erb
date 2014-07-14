@@ -27,10 +27,11 @@
 
 		<%= button_to "View all favorites", { controller: :favorites, action: :index }, :method => :get, :class => "btn btn-default btn-md" %>
 		<% else %>
-			Already a member?
-			<%= link_to "Sign in to favorite this listing", new_user_session_path,:class=>'btn btn-info' %><br></br>
-			Not a member yet?
-			<%= link_to "Sign up to favorite this listing", new_user_registration_path,:class=>'btn btn-info' %> 
+			<br>
+			<p class="member">Already a member?  
+			<%= link_to "Sign in to favorite this listing", new_user_session_path,:class=>'btn btn-info' %></p><br>
+			<p class="member">Not a member yet?
+			<%= link_to "Sign up to favorite this listing", new_user_registration_path,:class=>'btn btn-info' %></p> 
 		<% end %>
 
 		</div><!-- col-md-3 -->
