@@ -27,8 +27,14 @@ class FavoritesController < ApplicationController
   end
 
   def destroy
-    Favorite.find(params[:id]).destroy
-    redirect_to favorites_path
+    @favorite = Favorite.find(params[:id])
+    @favorite.destroy
+    @favorites = current_user.favorites
+    if @favorites.count > 0
+      redirect_to favorites_path
+    else
+      redirect_to dashboard_index_path
+    end
   end
 
   def update
