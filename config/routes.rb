@@ -15,7 +15,7 @@ FrugalEater::Application.routes.draw do
 # #   Prefix Verb   URI Pattern                    Controller#Action
 #         new_user_session GET    /users/sign_in(.:format)       devise/sessions#new
 #             user_session POST   /users/sign_in(.:format)       devise/sessions#create
-#     destroy_user_session DELETE /users/sign_out(.:format)      devise/sessions#destroy
+#     destroy_user_session GET    /users/sign_out(.:format)      devise/sessions#destroy
 #            user_password POST   /users/password(.:format)      devise/passwords#create
 #        new_user_password GET    /users/password/new(.:format)  devise/passwords#new
 #       edit_user_password GET    /users/password/edit(.:format) devise/passwords#edit
