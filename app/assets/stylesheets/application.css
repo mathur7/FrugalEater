@@ -20,8 +20,6 @@
   vertical-align: text-bottom;
   position: relative;
   width: 180px;
-  /*height:100%;
-  margin-top:-3px;*/
  }
 
  #powered_by_locu {
@@ -260,10 +258,6 @@ body {
 
 .row1 {
   position: relative;
-}
-
-img {
-  margin-right: 700px;
 }
 
 
