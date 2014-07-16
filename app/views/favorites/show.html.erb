@@ -1,23 +1,22 @@
-<div class="row">
-	<div class="col-sm-3">	
-		<p>Menu item: <%= @favorite.name %></p>
-		<p>Description: <%= @favorite.description %></p>
-		<p>Price: <%= @favorite.price %></p>
-		<p>Restaurant: <%= @favorite.restaurant %></p>
-		<p>Address: <%= @favorite.address %></p>
-		<p><%= @favorite.postal_code %></p>
-		<p><%= @favorite.locality %></p>
-		<p><%= @favorite.region %></p>
-
-		<%= button_to "View all favorites", { controller: :favorites, action: :index }, :method => :get, :class => "btn btn-default btn-md" %>
-
-	</div>
-	<div class="col-sm-9">
-	<%= image_tag "http://maps.google.com/maps/api/staticmap?size=650x450&sensor=false&markers=#{@favorite.address} &zoom=16", :class => "style_img" %>
+<div class="container">
+	<div class="row">
+		<div class="col-md-4">
+			<p>Menu item: <%= @favorite.name %></p>
+			<p>Description: <%= @favorite.description %></p>
+			<p>Price: <%= @favorite.price %></p>
+			<p>Restaurant: <%= @favorite.restaurant %></p>
+			<p>Address: <%= @favorite.address %></p>
+			<p><%= @favorite.postal_code %></p>
+			<p><%= @favorite.locality %></p>
+			<p><%= @favorite.region %></p>
 	
-
-		<div class="get-direct">
-          <%= link_to "Get Directions", "https://maps.google.com/maps?daddr=#{@favorite.address}", :method => "get", id: "directions" %>
-    </div><!-- get-direct -->  
-    </div> 
+			<%= button_to "View all favorites", { controller: :favorites, action: :index }, :method => :get, :class => "btn btn-default btn-md" %>
+		</div>
+		<div class = "col-md-8">
+		<%= image_tag "http://maps.google.	com/maps/api/staticmap?size=650x450&sensor=false&markers=#{@favorite.address} &zoom=16	", :class => "style_img" %>
+			<div class="get-direct">
+  	        <%= link_to "Get Directions", "https://maps.google.com/maps?daddr=#{@favorite.	address}", :method => "get", id: "directions" %>
+  	  </div><!-- get-direct -->  
+  	</div> 
+  </div>
 </div>
