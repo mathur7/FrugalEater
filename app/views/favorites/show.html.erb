@@ -9,7 +9,6 @@
 			<p><%= @favorite.postal_code %></p>
 			<p><%= @favorite.locality %></p>
 			<p><%= @favorite.region %></p>
-	
 			<%= button_to "View all favorites", { controller: :favorites, action: :index }, :method => :get, :class => "btn btn-default btn-md" %>
 		</div>
 		<div class = "col-md-8">

@@ -1,26 +1,21 @@
-
-
 <div class="panel panel-default">
   <div class="panel-heading">Here's all the stuff you can eat, frugaleater!</div>
   <table class="table table-hover">
-
     <thead>
-    <tr>
-    <th>Name</th>
-    <th>Price</th>
-    <th>Restaurant</th>
-    </tr>
+      <tr>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Restaurant</th>
+     </tr>
     </thead>
-
     <tbody>
-    <tr>    
-        <% @menuitems["objects"].each do |i| %>
+      <tr>    
+      <% @menuitems["objects"].each do |i| %>
         <td><a href='/menuitems/<%=i["id"]%>'><%=i["name"]%></a></td>
         <td><a href='/menuitems/<%=i["id"]%>'><%=i["price"]%></a></td>
         <td><a href='/menuitems/<%=i["id"]%>'><%=i["venue"]["name"]%></a><br></td>
-        </tr>
+      </tr>
     </tbody> 
-    <% end %>
-
-    </table> 
+      <% end %>
+  </table> 
 </div> 

@@ -23,8 +23,7 @@
 				<%= f.hidden_field :region, :value => @region %>
 				<%= f.hidden_field :user_id, :value => current_user.id %>
 				<%= button_to "Favorite", { controller: :favorites, action: :create }, :method => :post, :class => "btn btn-default btn-md" %> <br>
-			<% end %>
-	
+			<% end %>	
 			<%= button_to "View all favorites", { controller: :favorites, action: :index }, :method => :get, :class => "btn btn-default btn-md" %>
 			<% else %>
 				<br>
@@ -34,13 +33,11 @@
 				<%= link_to "Sign up to favorite this listing", new_user_registration_path,:class=>'btn btn-info' %></p> 
 			<% end %>
 		</div><!-- col-md-4 -->
-	
 		<div class = "col-md-8">
 			<%= image_tag "http://maps.google.com/maps/api/staticmap?size=800x400&sensor=false&markers=#{@address} &zoom=16", :class => "style_img" %>
 			<div class="get-direct">
   	    <%= link_to "Get Directions", "https://maps.google.com/maps?daddr=#{@address}", :method => "get", id: "directions" %>
   	  </div><!-- get-direct -->   
 		</div><!-- col-md-8 -->
-
 	</div><!-- row -->
 </div><!-- container -->

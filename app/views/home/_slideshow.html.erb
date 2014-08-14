@@ -1,56 +1,53 @@
 <div class="container-fluid">
-<div class="row">
-<div class="col-md-9 col-md-6">
+  <div class="row">
+    <div class="col-md-9 col-md-6">
     <a href="javascript:slidelink()">
-        <img id="slideshow" src="http://i.imgur.com/8XObPga.jpg" name="slide" width="650" />
+      <img id="slideshow" src="http://i.imgur.com/8XObPga.jpg" name="slide" width="650" />
     </a>
-
     <script type="text/javascript">
-        var image1 = new Image()
-         image1.src = "http://i.imgur.com/8XObPga.jpg"
-        var image2 = new Image()
-         image2.src = "http://i.imgur.com/6L6SNia.jpg"
-        var image3 = new Image()
-         image3.src = "http://i.imgur.com/I3LRQgU.jpg"
-        var image4 = new Image()
-         image4.src = "http://i.imgur.com/5g0TAhM.jpg"
-        var image5 = new Image()
-         image5.src = "http://i.imgur.com/RiQNmLV.jpg"
-        var image6 = new Image()
-         image6.src = "http://i.imgur.com/23C5BeH.jpg"
+      var image1 = new Image()
+       image1.src = "http://i.imgur.com/8XObPga.jpg"
+      var image2 = new Image()
+       image2.src = "http://i.imgur.com/6L6SNia.jpg"
+      var image3 = new Image()
+       image3.src = "http://i.imgur.com/I3LRQgU.jpg"
+      var image4 = new Image()
+       image4.src = "http://i.imgur.com/5g0TAhM.jpg"
+      var image5 = new Image()
+       image5.src = "http://i.imgur.com/RiQNmLV.jpg"
+      var image6 = new Image()
+       image6.src = "http://i.imgur.com/23C5BeH.jpg"
     </script>
     <script type="text/javascript">
-        var step = 1
-        var whichimage = 1
-
-        function slideit() {
-            if (!document.images)
-                return
-            document.images.slide.src = eval("image" + step + ".src")
-            whichimage = step
-            if (step < 6)
-                step++
-            else
-                step = 1
-            setTimeout("slideit()", 1800)
-        }
-        slideit()
-
-        function slidelink() {
-            if (whichimage == 1)
-                window.location = "/menuitems/b391e7faf116e324a3744abea2ccf91523e9a9974895396d1b24c37eb30690bc"
-            else if (whichimage == 2)
-                window.location = "/menuitems/7181fdf485be6673237bdb08bad3523a4efd3e14351d359766aae3a8e1df5715"
-            else if (whichimage == 3)
-                window.location = "menuitems/c357c111436fed1449210caf90499ff51067a0956af2c5861f47c4d532a72b41"
-            else if (whichimage == 4)
-                window.location = "menuitems/3fd98ab7b7ce715fe8eeb33f99c6c3ced264853265964b0716aa73268af1a885"
-            else if (whichimage == 5)
-                window.location = "menuitems/6949c6837d5d6a87148dacdd7a311895753388458b74e09f19276d63df731192"
-            else if (whichimage == 6)
-                window.location = "menuitems/716b0be92a9269d0789147b3c51b675115a5c2517563acc64cb8e5d931d5fb39"
-        }
+      var step = 1
+      var whichimage = 1
+      function slideit() {
+          if (!document.images)
+              return
+          document.images.slide.src = eval("image" + step + ".src")
+          whichimage = step
+          if (step < 6)
+              step++
+          else
+              step = 1
+          setTimeout("slideit()", 1800)
+      }
+      slideit()
+      function slidelink() {
+          if (whichimage == 1)
+              window.location = "/menuitems/b391e7faf116e324a3744abea2ccf91523e9a9974895396d1b24c37eb30690bc"
+          else if (whichimage == 2)
+              window.location = "/menuitems/7181fdf485be6673237bdb08bad3523a4efd3e14351d359766aae3a8e1df5715"
+          else if (whichimage == 3)
+              window.location = "menuitems/c357c111436fed1449210caf90499ff51067a0956af2c5861f47c4d532a72b41"
+          else if (whichimage == 4)
+              window.location = "menuitems/3fd98ab7b7ce715fe8eeb33f99c6c3ced264853265964b0716aa73268af1a885"
+          else if (whichimage == 5)
+              window.location = "menuitems/6949c6837d5d6a87148dacdd7a311895753388458b74e09f19276d63df731192"
+          else if (whichimage == 6)
+              window.location = "menuitems/716b0be92a9269d0789147b3c51b675115a5c2517563acc64cb8e5d931d5fb39"
+      }
     </script>
-</div>
-</div>
+    </div>
+  </div>
 </div>

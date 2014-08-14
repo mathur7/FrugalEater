@@ -2,7 +2,6 @@
 <div class="panel panel-default">
   <div class="panel-heading">Here's all the stuff you can eat, frugaleater!</div>
   <table class="table table-bordered">
-
     <thead>
     <tr>
     <th>Name</th>
@@ -11,10 +10,8 @@
     <th>Delete</th>
     </tr>
     </thead>
-
     <tbody>
-    <tr>    
-    
+    <tr>       
     <% @favorites.each do |i| %>    
         <td><a href="/favorites/<%=i["id"]%>"><%=i["name"]%></a></td>
         <td><a href="/favorites/<%=i["id"]%>"><%= i["price"] %></a></td>
