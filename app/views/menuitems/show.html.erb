@@ -1,49 +1,46 @@
 <div class="container">
-<div class="row">
-	<div class="col-md-4">
-		<p>Menu item: <%= @item %> 
-		<p>Description: <%= @description %> </p> 
-		<p>Price: $<%= @price %> </p>
-		<p>Restaurant: <%= @name %> </p>
-		<p> 
-			<%= @address %> <br>
-			<%= @locality %> <br>
-			<%= @region %>, <%= @postal_code %> <br>
-		</p>
-
-		<% if current_user %>
-		<%= form_for @favorite do |f| %>
-			<%= f.hidden_field :name, :value => @item %>
-			<%= f.hidden_field :description, :value => @description %>
-			<%= f.hidden_field :restaurant, :value => @name %>
-			<%= f.hidden_field :price, :value => @price %>
-			<%= f.hidden_field :address, :value => @address %>
-			<%= f.hidden_field :postal_code, :value => @postal_code %>
-			<%= f.hidden_field :locality, :value => @locality %>
-			<%= f.hidden_field :region, :value => @region %>
-			<%= f.hidden_field :user_id, :value => current_user.id %>
-			<%= button_to "Favorite", { controller: :favorites, action: :create }, :method => :post, :class => "btn btn-default btn-md" %> <br>
-		<% end %>
-
-		<%= button_to "View all favorites", { controller: :favorites, action: :index }, :method => :get, :class => "btn btn-default btn-md" %>
-		<% else %>
-			<br>
-			<p class="member">Already a member?  
-			<%= link_to "Sign in to favorite this listing", new_user_session_path,:class=>'btn btn-info' %></p><br>
-			<p class="member">Not a member yet?
-			<%= link_to "Sign up to favorite this listing", new_user_registration_path,:class=>'btn btn-info' %></p> 
-		<% end %>
-
-		</div><!-- col-md-3 -->
-
+	<div class="row">
+		<div class="col-md-4">
+			<p>Menu item: <%= @item %> 
+			<p>Description: <%= @description %> </p> 
+			<p>Price: $<%= @price %> </p>
+			<p>Restaurant: <%= @name %> </p>
+			<p> 
+				<%= @address %> <br>
+				<%= @locality %> <br>
+				<%= @region %>, <%= @postal_code %> <br>
+			</p>
+			<!--if user logged in, give the option of favoriting the item else prompt them to sign up or sign in to favorite the item -->
+			<% if current_user %>
+			<%= form_for @favorite do |f| %>
+				<%= f.hidden_field :name, :value => @item %>
+				<%= f.hidden_field :description, :value => @description %>
+				<%= f.hidden_field :restaurant, :value => @name %>
+				<%= f.hidden_field :price, :value => @price %>
+				<%= f.hidden_field :address, :value => @address %>
+				<%= f.hidden_field :postal_code, :value => @postal_code %>
+				<%= f.hidden_field :locality, :value => @locality %>
+				<%= f.hidden_field :region, :value => @region %>
+				<%= f.hidden_field :user_id, :value => current_user.id %>
+				<%= button_to "Favorite", { controller: :favorites, action: :create }, :method => :post, :class => "btn btn-default btn-md" %> <br>
+			<% end %>
+	
+			<%= button_to "View all favorites", { controller: :favorites, action: :index }, :method => :get, :class => "btn btn-default btn-md" %>
+			<% else %>
+				<br>
+				<p class="member">Already a member?  
+				<%= link_to "Sign in to favorite this listing", new_user_session_path,:class=>'btn btn-info' %></p><br>
+				<p class="member">Not a member yet?
+				<%= link_to "Sign up to favorite this listing", new_user_registration_path,:class=>'btn btn-info' %></p> 
+			<% end %>
+		</div><!-- col-md-4 -->
+	
 		<div class = "col-md-8">
-		<%= image_tag "http://maps.google.com/maps/api/staticmap?size=800x400&sensor=false&markers=#{@address} &zoom=16", :class => "style_img" %>
+			<%= image_tag "http://maps.google.com/maps/api/staticmap?size=800x400&sensor=false&markers=#{@address} &zoom=16", :class => "style_img" %>
+			<div class="get-direct">
+  	    <%= link_to "Get Directions", "https://maps.google.com/maps?daddr=#{@address}", :method => "get", id: "directions" %>
+  	  </div><!-- get-direct -->   
+		</div><!-- col-md-8 -->
 
-		<div class="get-direct">
-          <%= link_to "Get Directions", "https://maps.google.com/maps?daddr=#{@address}", :method => "get", id: "directions" %>
-    </div><!-- get-direct -->   
-
-		</div><!-- col-md-9 -->
-
-</div><!-- row -->
-</div>
+	</div><!-- row -->
+</div><!-- container -->
